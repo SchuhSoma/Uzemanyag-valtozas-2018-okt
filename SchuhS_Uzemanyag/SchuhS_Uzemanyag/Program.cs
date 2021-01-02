@@ -14,6 +14,8 @@ namespace SchuhS_Uzemanyag
         static List<int> BenzinGazolajKulTisztan;
         static List<int> BenzinGazolajKul;
         static int MinKulonbseg;
+        static Dictionary<int, int> EvValtozasKozottiNapok;
+        static int BekertEv;
         static void Main(string[] args)
         {
             Feladat2Beolvasas(); Console.WriteLine("\n-------------------------------------\n");
@@ -44,7 +46,36 @@ namespace SchuhS_Uzemanyag
         private static void Feladat9()
         {
             Console.WriteLine("\n-------------------------------------\n");
-            Console.WriteLine("9.Feladat: ???");
+           Console.WriteLine("\n-------------------------------------\n");
+            Console.WriteLine("10.Feladat:");
+            EvValtozasKozottiNapok = new Dictionary<int, int>();
+            TimeSpan ElteltIdo;
+            string Napok;
+            int NapokSzama;
+            int MaxNapKeresettEvben = int.MinValue;
+            for (int i = 1; i < UzemanyagList.Count; i++)
+            {
+                ElteltIdo =UzemanyagList[i].ValtoztatasDatuma - UzemanyagList[i - 1].ValtoztatasDatuma;
+                Napok = ElteltIdo.ToString("dd");
+                NapokSzama = int.Parse(Napok);
+              /*Console.WriteLine("{0} : {1}",UzemanyagList[i].Ev,NapokSzama);*/
+                if(!EvValtozasKozottiNapok.ContainsValue(NapokSzama) && !EvValtozasKozottiNapok.ContainsKey(UzemanyagList[i].Ev))
+                {
+                    EvValtozasKozottiNapok.Add(UzemanyagList[i].Ev, NapokSzama);
+                }
+                if(UzemanyagList[i].Ev==BekertEv && MaxNapKeresettEvben < NapokSzama)
+                { MaxNapKeresettEvben = NapokSzama; }
+                
+            }
+            Console.WriteLine("\tA Vizsgált évben ({0}) két árváltozás között eltelt legnagyobb idő : {1}", BekertEv, MaxNapKeresettEvben);
+            foreach (var e in EvValtozasKozottiNapok)
+            {
+                if(e.Key==BekertEv && MaxNapKeresettEvben<e.Value)
+                {
+                    MaxNapKeresettEvben = e.Value;
+                }
+            }
+            Console.WriteLine("\tA Vizsgált évben ({0}) két árváltozás között eltelt legnagyobb idő : {1}",BekertEv,MaxNapKeresettEvben);
         }
 
         private static void Feladat7Euro()
