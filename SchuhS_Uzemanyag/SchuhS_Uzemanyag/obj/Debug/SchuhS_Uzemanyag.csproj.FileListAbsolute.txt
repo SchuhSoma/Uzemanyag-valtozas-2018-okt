@@ -1,0 +1,7 @@
+C:\Users\Soma\Documents\C#2\SchuhS_Uzemanyag\SchuhS_Uzemanyag\bin\Debug\SchuhS_Uzemanyag.exe.config
+C:\Users\Soma\Documents\C#2\SchuhS_Uzemanyag\SchuhS_Uzemanyag\bin\Debug\SchuhS_Uzemanyag.exe
+C:\Users\Soma\Documents\C#2\SchuhS_Uzemanyag\SchuhS_Uzemanyag\bin\Debug\SchuhS_Uzemanyag.pdb
+C:\Users\Soma\Documents\C#2\SchuhS_Uzemanyag\SchuhS_Uzemanyag\obj\Debug\SchuhS_Uzemanyag.csprojAssemblyReference.cache
+C:\Users\Soma\Documents\C#2\SchuhS_Uzemanyag\SchuhS_Uzemanyag\obj\Debug\SchuhS_Uzemanyag.csproj.CoreCompileInputs.cache
+C:\Users\Soma\Documents\C#2\SchuhS_Uzemanyag\SchuhS_Uzemanyag\obj\Debug\SchuhS_Uzemanyag.exe
+C:\Users\Soma\Documents\C#2\SchuhS_Uzemanyag\SchuhS_Uzemanyag\obj\Debug\SchuhS_Uzemanyag.pdb
